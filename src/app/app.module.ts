@@ -23,7 +23,9 @@ import { CollectionComponent } from './collection/collection.component';
     GeolocationComponent,
     BasicComponent,
     ClusterComponent,
-    RasterComponent
+    RasterComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
