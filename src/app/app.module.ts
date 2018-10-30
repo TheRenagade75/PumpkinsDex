@@ -8,6 +8,7 @@ import { BonbonDEX1Component } from './bonbon-dex1/bonbon-dex1.component';
 import { BonbonDEX2Component } from './bonbon-dex2/bonbon-dex2.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { CollectionComponent } from './collection/collection.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterComponent } from './footer/footer.component';
     BonbonDEX1Component,
     BonbonDEX2Component,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CollectionComponent
   ],
   imports: [
     BrowserModule,
