@@ -10,9 +10,11 @@ import { GeolocationService } from '../common/geolocation.service';
 
 
 export class GeolocationComponent implements OnInit {
+  position: string;
 
-  constructor(geolocationService: GeolocationService) {
+  constructor(private geolocationService: GeolocationService) {
   }
   ngOnInit() {
+    this.position = this.geolocationService.maPosition( navigator.geolocation.getCurrentPosition);
   }
 }

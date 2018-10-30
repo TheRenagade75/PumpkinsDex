@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import {AngularOpenlayersModule} from 'ngx-openlayers';
 import {AppRoutingModule} from './app.routing';
 
@@ -25,20 +25,19 @@ import { CollectionComponent } from './collection/collection.component';
     ClusterComponent,
     RasterComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CollectionComponent,
+    HomeComponent,
+    BonbonDEX1Component,
+    BonbonDEX2Component,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularOpenlayersModule,
-    HomeComponent,
-    BonbonDEX1Component,
-    BonbonDEX2Component,
-    HeaderComponent,
-    FooterComponent,
-    CollectionComponent,
     HttpClientModule,
-    RoutingRoutingModule
+    RoutingRoutingModule,
   ],
 
   providers: [],
