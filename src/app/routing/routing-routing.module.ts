@@ -8,11 +8,11 @@ const routes: Routes = [
   { path: 'defaut', component: HomeComponent },
   { path: '', redirectTo: '/defaut', pathMatch: 'full' },
   { path: 'bonbon-dex1', component: BonbonDEX1Component},
-  { path: 'bonbon-dex2', component: BonbonDEX2Component}
+  { path: 'bonbon-dex2/:id', component: BonbonDEX2Component},
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class RoutingRoutingModule { }

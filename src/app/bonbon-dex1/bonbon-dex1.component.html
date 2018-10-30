@@ -1,10 +1,10 @@
 <div class='body'>
-  <div class='row'>
+  <div class='row justify-content-center'>
     <div *ngFor='let bonbon of bonbons' class="card col-2" style="width: 18rem;">
       <img class="card-img-top" src="{{bonbon.image_url}}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{bonbon.product_name}} </h5>
-        <a href="#" class="btn btn-primary">Détails</a>
+        <a routerLink="/bonbon-dex2/{{bonbon.id}}" class="btn btn-primary">Détails</a>
       </div>
     </div>
   </div>
