@@ -7,7 +7,7 @@ interface RasterData {
 }
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-raster',
   templateUrl: './raster.component.html',
   styleUrls: ['./raster.component.css'],
 })
