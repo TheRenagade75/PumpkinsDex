@@ -2,4 +2,6 @@
   font-family: 'Poppins';
 }
 
-
+.card {
+  margin: 10px;
+}

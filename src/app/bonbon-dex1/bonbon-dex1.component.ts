@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BonbonsService } from '../common/bonbons.service';
 
 @Component({
   selector: 'app-bonbon-dex1',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bonbon-dex1.component.css']
 })
 export class BonbonDEX1Component implements OnInit {
-
-  constructor() { }
+bonbons: any;
+  constructor(private service: BonbonsService) { }
 
   ngOnInit() {
+    this.service.getBonbons()
+      .subscribe(data => {
+        this.bonbons = data.products;
+        console.log(this.bonbons);
+      });
   }
 
 }
