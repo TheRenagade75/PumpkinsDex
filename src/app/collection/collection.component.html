@@ -1,0 +1,15 @@
+<div class="body container-fluid">
+  <div class='row justify-content-center' *ngIf='!collec'>
+    <h1>IL EST TEMPS DE COMMENCER VOS CAPTURES</h1>
+    <small>feignant, va</small>
+  </div>
+  <div class='row justify-content-center' *ngIf='collec'>
+      <div *ngFor='let bonbon of collec' class="card col-2" style="width: 18rem;">
+          <img class="card-img-top" src="{{bonbon.image_url}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{bonbon.product_name}} </h5>
+            <a routerLink="/bonbon-dex2/{{bonbon.id}}" class="btn btn-primary">Détails</a>
+          </div>
+        </div>
+  </div>
+</div>
