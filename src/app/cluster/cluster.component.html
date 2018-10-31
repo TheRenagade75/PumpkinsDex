@@ -3,8 +3,8 @@
   <aol-control-defaults></aol-control-defaults>
   <aol-control-fullscreen></aol-control-fullscreen>
 
-  <aol-view [zoom]="14">
-    <aol-coordinate [x]="1.4886" [y]="43.5554" [srid]="'EPSG:4326'"></aol-coordinate>
+  <aol-view [zoom]="12">
+    <aol-coordinate [x]="0.6833300" [y]="47.3833300" [srid]="'EPSG:4326'"></aol-coordinate>
   </aol-view>
 
   <aol-layer-tile [opacity]="1">
@@ -16,21 +16,18 @@
       <aol-source-vector>
         <aol-feature *ngFor="let p of points">
           <aol-geometry-point>
+            </aol-geometry-point>
+
+            <aol-overlay>
             <aol-coordinate [x]="p.x" [y]="p.y" [srid]="'EPSG:4326'"></aol-coordinate>
-          </aol-geometry-point>
+            <aol-content>
+              <span (click)="open(content)">
+                <img width="30px" class="icon" src="http://bilette70.b.i.pic.centerblog.net/0_cc857_183f9a16_L.png"></span>
+                </aol-content>
+              </aol-overlay>
+
         </aol-feature>
       </aol-source-vector>
-
-      <aol-style>
-        <aol-style-circle [radius]="10">
-          <aol-style-stroke [color]="'#fff'"></aol-style-stroke>
-          <aol-style-fill [color]="'#3399CC'"></aol-style-fill>
-        </aol-style-circle>
-        <aol-style-text [text]="'1'">
-          <aol-style-fill [color]="'#fff'"></aol-style-fill>
-        </aol-style-text>
-      </aol-style>
-
     </aol-source-cluster>
   </aol-layer-vector>
 
@@ -39,9 +36,8 @@
       <aol-feature>
         <aol-geometry-polygon>
           <aol-collection-coordinates
-            [coordinates]="[[1.47, 43.545],[1.51, 43.545],[1.51, 43.565], [1.47, 43.565]]"
-            [srid]="'EPSG:4326'"
-          >
+            [coordinates]="[[0.5, 47.300],[1.00, 47.300],[1.00, 47.500], [0.5, 47.500]]"
+            [srid]="'EPSG:4326'">
           </aol-collection-coordinates>
         </aol-geometry-polygon>
         <aol-style>
@@ -57,18 +53,17 @@
   <aol-source-vector>
     <aol-feature>
       <aol-geometry-point>
-        <aol-coordinate [x]="1.49" [y]="43.554" [srid]="'EPSG:4326'"></aol-coordinate>
+        <aol-coordinate [x]="0.668448" [y]="47.392645" [srid]="'EPSG:4326'"></aol-coordinate>
       </aol-geometry-point>
       <aol-style>
-        <aol-style-circle [radius]="10">
-          <aol-style-stroke [color]="'black'" [width]=""></aol-style-stroke>
-          <aol-style-fill [color]="'green'"></aol-style-fill>
+        <aol-style-circle [radius]="5">
+          <aol-style-fill [color]="'blue'"></aol-style-fill>
         </aol-style-circle>
       </aol-style>
     </aol-feature>
     <aol-feature>
       <aol-geometry-point>
-        <aol-coordinate [x]="5.1" [y]="45.1" [srid]="'EPSG:4326'"></aol-coordinate>
+        <aol-coordinate [x]="0.664664" [y]="47.398124 " [srid]="'EPSG:4326'"></aol-coordinate>
       </aol-geometry-point>
       <aol-style>
         <aol-style-icon
@@ -83,3 +78,27 @@
   </aol-source-vector>
 </aol-layer-vector>
 </aol-map>
+<ng-template #content let-modal>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Bravo!</h5>
+        <button type="button" class="close" (click)="modal.dismiss('erreur modal dismiss')" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <h6>Tu as trouvé {{nombonbons}}!</h6>
+        </div>
+        <div>
+          <h6>c'est un bonbon de classe:{{classebonbons}}</h6>
+        </div>
+        <div>
+          <h6>Nous t'invitons à regarder les bonbons qu'il te reste à recupérer, tu dois tous les récupérer!</h6>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="modal.dismiss('erreur modal dismiss')">cool!</button>
+      </div>
+    </div>
+  </ng-template>

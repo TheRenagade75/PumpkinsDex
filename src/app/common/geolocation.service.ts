@@ -7,26 +7,22 @@ export class GeolocationService {
 
   constructor() { }
 
+
   maPosition(position) {
     let infopos = 'Position déterminée :\n';
     infopos += 'Latitude : ' + position.coords.latitude + '\n';
     infopos += 'Longitude: ' + position.coords.longitude + '\n';
-    infopos += 'Altitude : ' + position.coords.altitude + '\n';
 
     return infopos;
   }
 
-  // if (navigator.geolocation) {
-  //   navigator.geolocation.getCurrentPosition(maPosition, erreurPosition, { maximumAge: 600000, enableHighAccuracy: true });
-  //   navigator.geolocation.watchPosition(surveillePosition);
-  // }
 
   surveillePosition(position) {
     let infopos = 'Position déterminée :\n';
     infopos += 'Latitude : ' + position.coords.latitude + '\n';
     infopos += 'Longitude: ' + position.coords.longitude + '\n';
-    infopos += 'Altitude : ' + position.coords.altitude + '\n';
-    infopos += 'Vitesse  : ' + position.coords.speed + '\n';
+
+    return infopos;
   }
 
   erreurPosition(error) {
@@ -46,4 +42,9 @@ export class GeolocationService {
         break;
     }
   }
+
+ // if (navigator) {
+  //  navigator.geolocation.getCurrentPosition(this.maPosition, this.erreurPosition, { maximumAge: 600000, enableHighAccuracy: true });
+   // navigator.geolocation.watchPosition(this.surveillePosition);
+//  }
 }

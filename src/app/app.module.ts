@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule} from '@angular/core';
 import {AngularOpenlayersModule} from 'ngx-openlayers';
 import {AppRoutingModule} from './app.routing';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { GeolocationComponent } from './geolocation/geolocation.component';
@@ -37,6 +38,7 @@ import { CollectionComponent } from './collection/collection.component';
     AppRoutingModule,
     AngularOpenlayersModule,
     HttpClientModule,
+    NgbModule,
     RoutingRoutingModule,
   ],
 
