@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularOpenlayersModule } from 'ngx-openlayers';
 import { AppRoutingModule } from './app.routing';
-import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModalModule, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { GeolocationComponent } from './geolocation/geolocation.component';
 import { BasicComponent } from './basic/basic.component';
@@ -41,10 +41,10 @@ import { FormsModule, ReactiveFormsModule, } from '@angular/forms';
     AppRoutingModule,
     AngularOpenlayersModule,
     HttpClientModule,
-    NgModule,
     RoutingRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    NgbModalModule,
   ],
 
   providers: [],
