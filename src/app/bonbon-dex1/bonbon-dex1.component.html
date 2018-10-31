@@ -4,6 +4,12 @@
       <img class="card-img-top" src="{{bonbon.image_url}}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{bonbon.product_name}} </h5>
+        <div class='row' *ngIf='!captured'>
+          <h4 id='ncapture'>Non capturé !</h4>
+        </div>
+        <div class='row' *ngIf='captured'>
+          <h4 id='capture'>Capturé !</h4>
+        </div>
         <a routerLink="/bonbon-dex2/{{bonbon.id}}" class="btn btn-primary">Détails</a>
       </div>
     </div>

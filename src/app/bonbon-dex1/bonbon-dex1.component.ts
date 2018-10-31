@@ -8,6 +8,7 @@ import { BonbonsService } from '../common/bonbons.service';
 })
 export class BonbonDEX1Component implements OnInit {
 bonbons: any;
+captured: boolean;
   constructor(private service: BonbonsService) { }
 
   ngOnInit() {

@@ -5,3 +5,14 @@
 .card {
   margin: 10px;
 }
+
+#capture {
+  color: #06D6A0
+}
+
+#ncapture {
+  color: #ED1C24;
+}
+.btn {
+margin: 10px;
+}
