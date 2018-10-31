@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule} from '@angular/core';
-import {AngularOpenlayersModule} from 'ngx-openlayers';
-import {AppRoutingModule} from './app.routing';
-
+import { NgModule } from '@angular/core';
+import { AngularOpenlayersModule } from 'ngx-openlayers';
+import { AppRoutingModule } from './app.routing';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { GeolocationComponent } from './geolocation/geolocation.component';
 import { BasicComponent } from './basic/basic.component';
@@ -16,6 +16,8 @@ import { BonbonDEX2Component } from './bonbon-dex2/bonbon-dex2.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CollectionComponent } from './collection/collection.component';
+import { FormComponent } from './form/form.component';
+import { FormsModule, ReactiveFormsModule, } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { CollectionComponent } from './collection/collection.component';
     BonbonDEX1Component,
     BonbonDEX2Component,
     HeaderComponent,
+    FormComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -38,6 +42,8 @@ import { CollectionComponent } from './collection/collection.component';
     AngularOpenlayersModule,
     HttpClientModule,
     RoutingRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
 
   providers: [],

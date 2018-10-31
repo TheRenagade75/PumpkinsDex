@@ -1,8 +1,11 @@
 .body {
   font-family: 'Poppins';
+  background-color: #5BC0EB;
+  min-height: 77vh;
 }
 
 .row {
   margin: 10px;
+  width: 100%;
 }
 

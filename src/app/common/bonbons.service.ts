@@ -6,8 +6,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BonbonsService {
 
-  bonbon: any;
-  bonbons: any[];
   constructor(private http: HttpClient) { }
 
   getBonbons() {

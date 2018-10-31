@@ -1,0 +1,38 @@
+<div class='body containenr-fluid'>
+
+  <h2 class='text-center'>
+    Pour devenir un gardien des bonbons veuillez remplir le formulaire ci-dessous
+  </h2>
+  <form id='contact'>
+    <div class="form-group">
+      <label for="adresse">Votre adresse</label>
+      <input type="adresse" name='adresse' [(ngModel)]="media.adresse" class="form-control" id="adresse"
+        aria-describedby="emailHelp" placeholder="Entrez votre adresse">
+      <small id="emailHelp" class="form-text text-muted">Ce champ est obligatoire</small>
+    </div>
+    <div class='form-group'>
+      <label for='image'>Image de vos bonbons</label>
+      <input type='url' name='url' [(ngModel)]="media.url" class='form-control' id='url-image' placeholder="URL de votre image">
+      <small id="emailHelp" class="form-text text-muted">Ce champ est obligatoire</small>
+    </div>
+    <div class='form-group'>
+      <label for='categorie'>Catégories</label>
+      <input type='categorie' name='categorie' [(ngModel)]="media.categorie" class='form-control' id='categorie'
+        placeholder="Categorie de vos bonbons">
+    </div>
+    <div class='form-group'>
+      <label for='pays'>Pays de provenance</label>
+      <input type="pays" name='pays' [(ngModel)]="media.pays" class='form-control' id='pays-de-provenance' placeholder="Pays de provenance de vos bonbons">
+    </div>
+    <div class='form-group'>
+      <label for="nutriscore">Nutriscore</label>
+      <input type='nutriscore' name='nutriscore' [(ngModel)]="media.nutriscore" class='form-control' id='nutriscore'
+        placeholder="Nutriscore de vos bonbons">
+    </div>
+    <button class='btn btn-success' (click)='envoi()' (click)='pop=!pop '>Envoyer</button>
+    <div class="alert alert-success" role="alert" *ngIf='ok != []'>
+      <strong>Merci !</strong> Nous avons bien reçu vos informations.
+    </div>
+  </form>
+  <img src='http://48c8y41n92m6lvuiz3xc1g4w.wpengine.netdna-cdn.com/wp-content/uploads/tricksortreats-1.jpg'>
+</div>

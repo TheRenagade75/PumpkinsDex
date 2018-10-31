@@ -7,6 +7,7 @@ import { HomeComponent } from 'src/app/home/home.component';
 import { BonbonDEX1Component } from 'src/app/bonbon-dex1/bonbon-dex1.component';
 import { BonbonDEX2Component } from 'src/app/bonbon-dex2/bonbon-dex2.component';
 import { CollectionComponent } from 'src/app/collection/collection.component';
+import { FormComponent } from 'src/app/form/form.component';
 
 const routes: Routes = [
   { path: 'basic', component: BasicComponent },
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/defaut', pathMatch: 'full' },
   { path: 'bonbon-dex1', component: BonbonDEX1Component},
   { path: 'bonbon-dex2/:id', component: BonbonDEX2Component},
-  { path: 'collection', component: CollectionComponent }
+  { path: 'collection', component: CollectionComponent },
+  { path: 'form', component: FormComponent}
 ];
 
 @NgModule({

@@ -13,8 +13,8 @@ export class ClusterComponent implements OnInit {
     const nbPoints = 2000;
     for (let i = 0; i < nbPoints; ++i) {
       this.points.push({
-        x : this.getRandomInRange(1.47, 1.51, 4),
-        y: this.getRandomInRange(43.545, 43.565, 4)
+        x : this.getRandomInRange(0.5, 1.0, 4),
+        y: this.getRandomInRange(47.300, 47.500, 4)
       });
     }
   }
