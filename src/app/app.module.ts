@@ -41,6 +41,7 @@ import { FormsModule, ReactiveFormsModule, } from '@angular/forms';
     AppRoutingModule,
     AngularOpenlayersModule,
     HttpClientModule,
+    NgModule,
     RoutingRoutingModule,
     FormsModule,
     ReactiveFormsModule,
